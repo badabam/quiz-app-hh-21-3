@@ -3,18 +3,14 @@ const pageHome = document.querySelector('[data-page="home"]')
 const pageCreate = document.querySelector('[data-page="create"]')
 const pageBookmarks = document.querySelector('[data-page="bookmarks"]')
 
-const headerHome = document.querySelector('[data-header="home"]')
-const headerCreate = document.querySelector('[data-header="create"]')
-const headerBookmarks = document.querySelector('[data-header="bookmarks"]')
+const header = document.querySelector('[data-header]')
 
 const buttonHome = document.querySelector('[data-button="home"]')
 const buttonCreate = document.querySelector('[data-button="create"]')
 const buttonBookmarks = document.querySelector('[data-button="bookmarks"]')
 
 buttonHome.addEventListener('click', () => {
-  headerHome.classList.remove('hidden')
-  headerCreate.classList.add('hidden')
-  headerBookmarks.classList.add('hidden')
+  header.innerText = 'Quiz App'
 
   pageHome.classList.remove('hidden')
   pageCreate.classList.add('hidden')
@@ -26,9 +22,7 @@ buttonHome.addEventListener('click', () => {
 })
 
 buttonBookmarks.addEventListener('click', () => {
-  headerHome.classList.add('hidden')
-  headerCreate.classList.add('hidden')
-  headerBookmarks.classList.remove('hidden')
+  header.innerText = 'Bookmarks'
 
   pageHome.classList.add('hidden')
   pageCreate.classList.add('hidden')
@@ -40,9 +34,7 @@ buttonBookmarks.addEventListener('click', () => {
 })
 
 buttonCreate.addEventListener('click', () => {
-  headerHome.classList.add('hidden')
-  headerCreate.classList.remove('hidden')
-  headerBookmarks.classList.add('hidden')
+  header.innerText = 'Create'
 
   pageHome.classList.add('hidden')
   pageCreate.classList.remove('hidden')
