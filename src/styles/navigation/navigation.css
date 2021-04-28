@@ -9,3 +9,7 @@
 .navigation__link {
   color: var(--color-white);
 }
+
+.navigation__link--active {
+  background: hotpink;
+}
