@@ -9,14 +9,8 @@
     <script defer type="module" src="./index.js"></script>
   </head>
   <body>
-    <header class="app-header js-page-home-header">
-      <h1 class="app-header__heading">Quiz App</h1>
-    </header>
-    <header class="app-header js-page-bookmark-header hidden">
-      <h1 class="app-header__heading">Bookmark</h1>
-    </header>
-    <header class="app-header js-page-create-header hidden">
-      <h1 class="app-header__heading">Create Cards</h1>
+    <header class="app-header">
+      <h1 data-header class="app-header__heading">Quiz App</h1>
     </header>
 
     <main data-page="home" class="app-main">
@@ -131,11 +125,27 @@
     </main>
 
     <nav class="navigation">
-      <button data-nav="home" class="navigation__link navigation__link--active">
+      <button
+        data-nav="home"
+        data-header-text="Quiz App"
+        class="navigation__link navigation__link--active"
+      >
         Home
       </button>
-      <button data-nav="bookmarks" class="navigation__link">Bookmark</button>
-      <button data-nav="create" class="navigation__link">Create</button>
+      <button
+        data-nav="bookmarks"
+        data-header-text="Bookmarks"
+        class="navigation__link"
+      >
+        Bookmark
+      </button>
+      <button
+        data-nav="create"
+        data-header-text="Create something"
+        class="navigation__link"
+      >
+        Create
+      </button>
     </nav>
   </body>
 </html>
