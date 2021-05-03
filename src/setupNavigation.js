@@ -9,15 +9,14 @@ export default function setupNavigation() {
     button.addEventListener('click', () => {
       pages.forEach(page => {
         const pageName = page.dataset.page
-
         page.classList.toggle('hidden', pageName !== buttonName)
+      })
 
-        // same result as the line above:
-        // if (pageName === buttonName) {
-        //   page.classList.remove('hidden')
-        // } else {
-        //   page.classList.add('hidden')
-        // }
+      buttons.forEach(button => {
+        button.classList.toggle(
+          'navigation__link--active',
+          button.dataset.nav === buttonName
+        )
       })
     })
   })
