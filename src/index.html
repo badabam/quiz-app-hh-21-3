@@ -19,7 +19,7 @@
       <h1 class="app-header__heading">Create Cards</h1>
     </header>
 
-    <main class="app-main js-page-home">
+    <main data-page="home" class="app-main">
       <section class="quiz-card">
         <div
           role="button"
@@ -76,7 +76,7 @@
       </section>
     </main>
 
-    <main class="app-main js-page-bookmark hidden">
+    <main data-page="bookmarks" class="app-main hidden">
       <section class="quiz-card">
         <div
           role="button"
@@ -112,7 +112,7 @@
       </section>
     </main>
 
-    <main class="js-page-create hidden">
+    <main data-page="create" class="hidden">
       <form class="form">
         <label>
           Add a question:
@@ -131,11 +131,11 @@
     </main>
 
     <nav class="navigation">
-      <button class="navigation__link navigation__link--active js-home-button">
+      <button data-nav="home" class="navigation__link navigation__link--active">
         Home
       </button>
-      <button class="navigation__link js-bookmark-button">Bookmark</button>
-      <button class="navigation__link js-create-button">Create</button>
+      <button data-nav="bookmarks" class="navigation__link">Bookmark</button>
+      <button data-nav="create" class="navigation__link">Create</button>
     </nav>
   </body>
 </html>

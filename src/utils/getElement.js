@@ -1,3 +1,3 @@
-export default function getElement(selector) {
-  return document.querySelector(selector)
+export default function getElement(selector, element = document) {
+  return element.querySelector(selector)
 }
